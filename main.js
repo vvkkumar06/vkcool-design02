@@ -29,18 +29,21 @@ $(document).ready(function(){
         // Prevent default anchor click behavior
         e.preventDefault();
       
-      
+        
         // Animate The Scroll
+        if(target){
         $('html, body').animate({
-        scrollTop: $(this.hash).offset().top -80
+        scrollTop: $(target).offset().top -80
         }, 1200, function(){
-      
+        
         // Adds hash to end of URL
         return window.history.pushState(null, null, target);
       
         });
+        }
       
         });
+        
       
 });
 
