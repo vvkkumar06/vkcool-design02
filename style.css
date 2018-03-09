@@ -234,6 +234,16 @@ footer p{
         float:none;
         clear:both;
     }
+    #logo{
+        z-index:12;
+        margin:0 auto;
+    }
+    .contact::after{
+        display:none !important;
+    }
+    .social li a i{
+        font-size: 24px !important;
+    }
 }
 
 @media only screen and (min-width: 777px){
@@ -280,3 +290,7 @@ footer p{
     border-top-right-radius: 25%;
     box-shadow: 0 -5px 2px 0 rgba(0,0,0,0.2);
 }
+nav ul li a.active {
+    color: #333;
+}
+    
