@@ -224,3 +224,12 @@ footer p{
         clear:both;
     }
 }
+
+@media only screen and (min-width: 777px){
+    nav ul{
+        display: block !important;
+    }
+}
+.display{
+    display: block !important;
+}
