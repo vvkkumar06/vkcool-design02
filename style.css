@@ -62,8 +62,8 @@ nav{
     float: right;
     padding:25px 20px 0 0;
 }
-.menu-icon{
-    display:hidden;
+#menu-icon{
+    display:none;
     width:40px;
     height:40px;
     background:url(img/nav.png) center;
@@ -191,6 +191,36 @@ footer p{
     text-align:center;
 }
 
-@media only screen and (max-width: 576px){
-
+@media only screen and (max-width: 776px){
+    .one-third, .one-fourth, article#mobile, article#tablet, article#desktop , aside#tablet, aside#desktop, aside#mobile{
+        width:100%;
+    }
+    p{
+        font-size:16px;
+    }
+    nav ul{
+        display:none;
+    }    
+    #menu-icon{
+        display:block;
+        position:absolute;
+        right:10px;
+        top:10px;
+    }
+    nav ul{
+        text-align:center;
+        font-size:20px;
+        z-index:10;
+        padding-bottom:15px;
+        background: #6991AC;
+        width:100%;
+        position:absolute;
+        left:0;
+        top:80px;
+    }
+    nav ul li{
+        display:block;
+        float:none;
+        clear:both;
+    }
 }
