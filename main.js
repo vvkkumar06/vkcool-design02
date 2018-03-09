@@ -40,8 +40,26 @@ $(document).ready(function(){
         // Adds hash to end of URL
         return window.history.pushState(null, null, target);
       
-        });
+          });
         }
       
         });
+
+        //on scroll
+
+        $(document).on("scroll", onScroll);
 });
+function onScroll(event){
+    var scrollPos = $(document).scrollTop();
+    $('nav ul li a').each(function () {
+        var currLink = $(this);
+        var refElement = $(currLink.attr("href"));
+        if (refElement.position().top - 150<= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
+            $('nav ul li a').removeClass("active");
+            currLink.addClass("active");
+        }
+        else{
+            currLink.removeClass("active");
+        }
+    });
+}
